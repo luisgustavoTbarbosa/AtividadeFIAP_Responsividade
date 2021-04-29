@@ -1,0 +1,261 @@
+:root {
+  --white-background: #F0F2F5;
+  --green: #49D228;
+  --black: #121214;
+  --gray: #CDCDCD;
+  --dark-gray: #7C7C7B;
+  --text-card: #AEAEAE;
+  --blue: #00B6EF;
+}
+
+.imageSelected {
+  height: 500px;
+}
+
+.imageSelected div {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--black);
+  position: absolute;
+  right: 0;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+.images {
+  overflow: auto;
+  display: flex;
+  padding: .5rem 0 0;
+}
+
+.images img {
+  height: 200px;
+}
+
+.images img:first-child {
+  margin-left: 1rem;
+}
+
+.images img + img {
+  margin-left: 1rem;
+}
+
+.infosHotel {
+  margin-top: 4rem;
+  padding: 0 1rem 0;
+  display: flex;
+}
+
+.infosHotel .descriptionModal {
+  width: 60%;
+}
+
+.infosHotel .descriptionModal p {
+  font-size: 1.5rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  color: var(--black);
+}
+
+.infosHotel .prices {
+  width: 40%;
+  text-align: right;
+}
+
+.infosHotel .prices p {
+  font-size: 1.3rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: var(--green);
+}
+
+.infosHotel .prices p + p {
+  margin-top: .5rem;
+}
+
+.infosHotel .prices p strong {
+  font-size: 1.3rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.location {
+  padding: 3rem 1rem 0;
+}
+
+.location div {
+  width: 60%;
+  height: 300px;
+}
+
+.location div iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.location h2 {
+  font-size: 1.3rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.selectHotel {
+  font-family: 'Poppins', sans-serif;
+  padding: 2rem 1rem;
+}
+
+.selectHotel .evaluate {
+  display: flex;
+  align-items: center;
+}
+
+.selectHotel .evaluate h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--blue);
+}
+
+.selectHotel .evaluate p {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-left: .5rem;
+  margin-right: .5rem;
+  color: var(--black);
+}
+
+.selectHotel .evaluate input {
+  width: 1.3rem;
+  height: 1.3rem;
+  color: var(--black);
+}
+
+.selectHotel .evaluate input + input {
+  margin-left: .5rem;
+}
+
+.selectHotel .completeSelection label {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #C89150;
+}
+
+.selectHotel .completeSelection input {
+  border: none;
+  height: 1.6rem;
+  width: 200px;
+  margin-left: 1rem;
+  border-radius: 4px;
+  padding-left: .5rem;
+  font-size: 1.2rem;
+}
+
+.selectHotel .completeSelection div {
+  display: flex;
+  align-items: center;
+}
+
+.selectHotel .completeSelection div + div {
+  margin-top: 1rem;
+}
+
+hr {
+  height: 1px;
+  background: var(--gray);
+  border: none;
+  margin: .5rem 0 1rem;
+}
+
+.selectHotel .completeSelection button {
+  border: none;
+  background: var(--green);
+  padding: .5rem 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  border-radius: 4px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.selectHotel .completeSelection .pricesDay {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 2rem 0 0;
+}
+
+.selectHotel .completeSelection .pricesDay h2 {
+  color: var(--green);
+  font-weight: 500;
+}
+
+.selectHotel .completeSelection .pricesDay strong {
+  color: var(--black);
+  font-weight: 500;
+}
+
+@media(max-width: 590px) {
+  .imageSelected {
+    height: 300px;
+  }
+
+  .images img {
+    height: 100px;
+  }
+
+  .infosHotel {
+    display: block;
+    text-align: center;
+  }
+
+  .infosHotel .descriptionModal {
+    width: 100%;
+  }
+
+  .infosHotel .prices {
+    margin-top: 2rem;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .location div {
+    width: 90%;
+    height: 300px;
+    margin: 0 auto;
+  }
+  
+  .selectHotel .evaluate {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .selectHotel .completeSelection div {
+    display: block;
+    text-align: center;
+  }
+
+  .selectHotel .completeSelection label {
+    display: block;
+  }
+
+  .selectHotel .completeSelection input {
+    height: 3rem;
+    font-size: 1.3rem;
+  }
+
+  .selectHotel .completeSelection button {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+}

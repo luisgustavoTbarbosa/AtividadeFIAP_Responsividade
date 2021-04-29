@@ -1,0 +1,438 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white-background: #F0F2F5;
+  --green: #50E42C;
+  --black: #121214;
+  --gray: #CDCDCD;
+  --dark-gray: #7C7C7B;
+  --text-card: #AEAEAE;
+}
+
+body {
+  background: var(--white-background);
+}
+
+.container {
+  width: min(1440px, 90vw);
+  margin: 0 auto;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header img {
+  height: 6rem;
+}
+
+.searchAccomodation {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.searchAccomodation h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: var(--black);
+}
+
+.searchAccomodation div {
+  width: 90%;
+  height: 3rem;
+
+  margin: 0 auto;
+  padding-right: 1rem;
+  display: flex;
+  align-items: center;
+
+  background: #fff;
+  border-radius: 4px;
+}
+
+.searchAccomodation div input {
+  border: none;
+  padding-left: 1rem;
+  height: 3rem;
+  border-radius: 4px;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 1.5rem;
+  color: var(--black);
+}
+
+::-webkit-input-placeholder {
+  color: var(--gray);
+}
+
+.searchAccomodation div img {
+  height: 80%;
+}
+
+.optionsTravel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.optionsTravel div {
+  background: var(--green);
+  padding: 1rem 1rem;
+  border-radius: 4px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.optionsTravel div + div {
+  margin-left: 1rem;
+}
+
+.suggestions .groupCard .card {
+  cursor: pointer;
+}
+
+.description {
+  margin-top: .5rem;
+}
+
+.description p {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: var(--text-card);
+}
+
+.suggestions .groupCard .card .cardHeader img{
+  width: 100%;
+  height: 100%;
+  border-radius: 4px 4px 0 0;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-overlay {
+width: 100%;
+height: 100%;
+
+background: rgba(0, 0, 0, 0.7);
+
+position: fixed;
+top: 0;
+left: 0;
+
+display: flex;
+justify-content: center;
+
+opacity: 0;
+visibility: hidden;
+
+z-index: 2;
+
+overflow: auto;
+}
+
+.modal {
+width: 60%;
+
+background: #f0f2f5;
+margin-top: 2.5rem;
+
+border-radius: 6px;
+
+position: absolute;
+z-index: 1;
+
+overflow: auto;
+}
+
+@media(max-width: 1080px) {
+  html {
+    font-size: 93.75%; /* 15px */
+  }
+}
+
+@media(min-width: 1024px) {
+  html {
+    font-size: 87.5%; /* 14px */
+  }
+
+  .searchAccomodation {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0 1.5rem;
+    padding-left: 1rem;
+  }
+
+  .searchAccomodation div {
+    width: 350px;
+    height: 2.5rem;
+
+    margin-left: 2rem;
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+  
+    background: #fff;
+    border-radius: 4px;
+  }
+
+  .searchAccomodation div input {
+    height: 2.5rem;
+    font-size: 1.5rem;
+  }
+
+  .optionsTravel {
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+  }
+
+  .suggestions h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--black);
+    margin: 2rem 0 0;
+  }
+  
+  .suggestions .groupCard {
+    padding: 1rem 1rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem 0rem;
+  }
+  
+  .suggestions .groupCard .card {
+    width: 90%;
+    background-color: white;
+    border-radius: 4px;
+  }
+  
+  .suggestions .groupCard .card .cardHeader {
+    /* background: url(../assets/img1.jpg); */
+    background-size: cover;
+    height: 200px;
+    border-radius: 4px 4px 0 0;
+  }
+  
+  .suggestions .groupCard .card .cardBody {
+    padding: .5rem 1rem 1rem 1rem;
+  }
+  
+  .suggestions .groupCard .card .cardBody h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+  }
+
+  .suggestions .groupCard .card .cardBody .description {
+    display: block;
+  }
+  
+  .suggestions .groupCard .card .cardBody .assessment {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  
+  .suggestions .groupCard .card .cardBody .assessment p {
+    color: var(--green);
+  }
+  
+  .suggestions .groupCard .card .cardBody .assessment strong {
+    font-weight: 500;
+    color: var(--dark-gray);
+  }
+  
+  .suggestions .groupCard .card .cardBody .assessment img {
+    width: 1.2rem;
+  }
+}
+
+@media(max-width: 1023px) {
+  :root {
+    font-size: 75%; /* 12px */
+  }
+
+  .modal {
+    width: 70%;
+  }
+
+  .searchAccomodation {
+    display: block;
+    margin-bottom: 2.5rem;
+  }
+  
+  .searchAccomodation div {
+    width: 90%;
+    height: 3rem;
+  }
+
+  .suggestions h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--black);
+    margin: 2rem 0 0;
+  }
+  
+  .suggestions .groupCard {
+    padding: 1rem 1rem 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2rem 1.5rem;
+  }
+  
+  .suggestions .groupCard .card {
+    width: 100%;
+    background-color: white;
+    border-radius: 4px;
+  }
+  
+  .suggestions .groupCard .card .cardHeader {
+    background: url(../assets/img1.jpg);
+    background-size: cover;
+    height: 150px;
+    border-radius: 4px 4px 0 0;
+  }
+  
+  .suggestions .groupCard .card .cardBody {
+    padding: .5rem 1rem 1rem 1rem;
+  }
+  
+  .suggestions .groupCard .card .cardBody h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+  }
+
+  .suggestions .groupCard .card .cardBody .description {
+    display: none;
+  }
+  
+  .suggestions .groupCard .card .cardBody .assessment {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  
+  .suggestions .groupCard .card .cardBody .assessment p {
+    color: var(--green);
+  }
+  
+  .suggestions .groupCard .card .cardBody .assessment strong {
+    font-weight: 500;
+    color: var(--dark-gray);
+  }
+  
+  .suggestions .groupCard .card .cardBody .assessment img {
+    width: 1.2rem;
+  }
+}
+
+@media(max-width: 590px) {
+  :root {
+    font-size: 62.25% /* 10px */
+  }
+
+  .modal {
+    width: 90%;
+  }
+
+  .searchAccomodation {
+    margin-bottom: 2.5rem;
+  }
+  
+  .searchAccomodation div {
+    width: 90%;
+    height: 3rem;
+  }
+
+  .suggestions h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--black);
+    margin: 2rem 0 0;
+  }
+  
+  .suggestions .groupCard {
+    padding: 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .suggestions .groupCard .card {
+    width: 70%;
+    background-color: white;
+    border-radius: 4px;
+  }
+  
+  .suggestions .groupCard .card + .card {
+    margin-top: 1.5rem;
+  }
+  
+  .suggestions .groupCard .card .cardHeader {
+    background-size: cover;
+    height: 180px;
+    border-radius: 4px 4px 0 0;
+  }
+  
+  .suggestions .groupCard .card .cardBody {
+    padding: .5rem 0 1rem 1rem;
+  }
+  
+  .suggestions .groupCard .card .cardBody h3 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+  }
+
+  .suggestions .groupCard .card .cardBody .description {
+    display: none;
+  }
+  
+  .suggestions .groupCard .card .cardBody .assessment {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-top: 1rem;
+  }
+  
+  .suggestions .groupCard .card .cardBody .assessment p {
+    color: var(--green);
+  }
+  
+  .suggestions .groupCard .card .cardBody .assessment strong {
+    font-weight: 500;
+    color: var(--dark-gray);
+  }
+  
+  .suggestions .groupCard .card .cardBody .assessment img {
+    width: 1.2rem;
+  }
+
+}
+
+
+
