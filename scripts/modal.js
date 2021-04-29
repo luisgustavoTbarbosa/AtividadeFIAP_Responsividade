@@ -120,7 +120,7 @@ function openModal(index) {
                       </section>
                       <section class="location">
                         <div>
-                            <iframe src="${dados[index].location}" allowfullscreen="" loading="lazy"></iframe>
+                            <iframe src="${dados[index].location}" allowfullscreen=""></iframe>
                         </div>
                         <h2>${dados[index].distanciaPaulista}</h2>
                       </section>

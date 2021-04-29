@@ -56,6 +56,7 @@ header img {
 
   background: #fff;
   border-radius: 4px;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
 }
 
 .searchAccomodation div input {
@@ -100,6 +101,7 @@ header img {
 
 .suggestions .groupCard .card {
   cursor: pointer;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
 }
 
 .description {
@@ -159,7 +161,7 @@ z-index: 1;
 overflow: auto;
 }
 
-@media(max-width: 1080px) {
+@media(min-width: 1080px) {
   html {
     font-size: 93.75%; /* 15px */
   }
@@ -217,7 +219,7 @@ overflow: auto;
   }
   
   .suggestions .groupCard .card {
-    width: 90%;
+    width: 80%;
     background-color: white;
     border-radius: 4px;
   }
